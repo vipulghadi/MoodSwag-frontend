@@ -25,19 +25,22 @@ function Navbar() {
         </div>
         <div className="flex sm:space-x-5 justify-center items-center ">
           <div className="flex justify-center  items-center flex-col">
-            <img src={dashboard} alt="" className="w-[25px]" />
-  {/*<p className="link text-[12px]">Dashboard</p>*/}
+
+            <img src={dashboard} alt="" className="w-[20px] link" />
+            <span className="text-[11px]">Dashboard</span>
           </div>
 
-          <div className="">
+          <div className="flex justify-center  items-center flex-col link">
             <img
               src={profile}
               alt=""
-              className="w-[30px] link sm:block hidden "
+              className="w-[20px] link sm:block hidden "
             />
+            <span className="text-[11px]">profile</span>
           </div>
-          <div>
-            <img src={cart} alt="" className="w-[30px] link mr-[10px]" />
+          <div className="flex justify-center  items-center flex-col link">
+            <img src={cart} alt="" className="w-[20px]  link" />
+            <span className="text-[11px]">cart</span>
           </div>
           <p></p>
         </div>

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f2f4;
+}
+
+.primary-bg {
+    background-color: #FF8126;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+}

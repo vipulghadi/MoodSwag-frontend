@@ -24,25 +24,28 @@ function Navbar() {
           />
         </div>
         <div className="flex sm:space-x-5 justify-center items-center ">
-          <div className="flex justify-center  items-center flex-col">
 
+          <div className="flex justify-center  items-center flex-col sm:mr-[3px] mr-[20px]">
             <img src={dashboard} alt="" className="w-[20px] link" />
-            <span className="text-[11px]">Dashboard</span>
+            <span className="text-[11px]  sm:block hidden">Dashboard</span>
           </div>
 
-          <div className="flex justify-center  items-center flex-col link">
+          <div className="justify-center  items-center flex-col link sm:flex hidden ">
             <img
               src={profile}
               alt=""
               className="w-[20px] link sm:block hidden "
             />
-            <span className="text-[11px]">profile</span>
+            <span className="text-[11px]  sm:block hidden">profile</span>
           </div>
-          <div className="flex justify-center  items-center flex-col link">
+
+
+          <div className="flex justify-center  items-center flex-col link sm:mr-[3px] mr-[10px]">
             <img src={cart} alt="" className="w-[20px]  link" />
-            <span className="text-[11px]">cart</span>
+            <span className="text-[11px] sm:block hidden">cart</span>
           </div>
-          <p></p>
+
+          
         </div>
       </div>
       <div className="w-full bg-pink-300 sm:hidden mt-2">

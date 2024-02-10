@@ -14,49 +14,57 @@ import SearchPage from "./pages/SearchPage";
 import Address from "./pages/Address";
 import Profile from "./pages/Profile";
 import Otp from "./pages/Otp";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
-import {setCredits,setTempPhoneNumber} from '../src/store/AuthSlice'
+import { setCredits, setTempPhoneNumber } from "../src/store/AuthSlice";
+import Analytics from "./pages/Merchant/Analytics";
+import AddProduct from "./pages/Merchant/AddProduct";
+import UpdateProduct from "./pages/Merchant/UpdateProduct";
+import DisplayMerchantProducts from "./pages/Merchant/DisplayMerchantProducts";
+import Customization from "./pages/Merchant/Customization";
 
 function App() {
-  const dispatch=useDispatch()
- useEffect(()=>{
-   //if local storage.authCredits is not null ,we can capture it from local stotrage
+  const dispatch = useDispatch();
 
-   if(JSON.parse(localStorage.getItem("authCredits"))){
-    
-        const credits=JSON.parse(localStorage.getItem("authCredits"))
-        console.log(credits);
-        console.log("in useEffect");
-        
-        dispatch(setCredits(credits.userCredits))
-        dispatch(setTempPhoneNumber(credits.
-          userTempPhoneNumber))
-   }
- },[])
+  useEffect(() => {
+    //if local storage.authCredits is not null ,we can capture it from local stotrage
+    if (JSON.parse(localStorage.getItem("authCredits")) == null) {
+      console.log("here");
+      localStorage.setItem("authCredits", JSON.stringify(null));
+    } else if (JSON.parse(localStorage.getItem("authCredits")) != null) {
+      const credits = JSON.parse(localStorage.getItem("authCredits"));
+      console.log(credits);
+      dispatch(setCredits(credits.userCredits));
+      dispatch(setTempPhoneNumber(credits.userTempPhoneNumber));
+    }
+  }, []);
 
   return (
     <>
-    <ToastContainer
-    autoClose={60000}/>
-      <Navbar/>
+      <ToastContainer autoClose={60000} />
+      <Navbar />
       <BrowserRouter>
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/verify-otp" element={<Otp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="checkout/cart" element={<Cart />} />
+          <Route path="checkout/address" element={<Address />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/search/:query" element={<SearchPage />} />
+          <Route path="/profile/edit" element={<Profile />} />
+        </Routes>
         <Routes>
-        <Route path="/" element={<Home />}></Route >
-            <Route path="/home" element={<Home />}></Route >
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/verify-otp" element={<Otp />}></Route>
-            <Route path="/login" element={<Login/>} ></Route>
-            <Route path="checkout/cart" element={<Cart />} ></Route>
-            <Route path="checkout/address" element={<Address />} ></Route>
-            <Route path="/product" element={<Product />}></Route>
-            <Route path="/search/:query" element={<SearchPage />}></Route>
-            <Route path="/profile/edit" element={<Profile />}></Route>
-
+             <Route path="/dashboard/analytics" element={<Analytics/>}/>
+             <Route path="/dashboard/update-product" element={<UpdateProduct/>}/>
+             <Route path="/dashboard/add-product" element={<AddProduct/>}/>
+             <Route path="/dashboard/products" element={<DisplayMerchantProducts/>}/>
+             <Route path="/dashboard/customizations" element={<Customization/>}/>
         </Routes>
       </BrowserRouter>
-     
     </>
   );
 }

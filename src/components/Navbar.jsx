@@ -4,8 +4,10 @@ import profile from "../assets/profile.png";
 import cart from "../assets/cart.png";
 import burger from "../assets/hamburger.png";
 import dashboard from "../assets/dashboard.png";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
+   
     <div className="w-full bg-white z-20  h-auto shadow-sm flex justify-between items-center sm:px-5 px-2 flex-wrap py-3 sm:h-20 fixed top-0">
       <div className="left flex  justify-center items-center space-x-5 ml-3  ">
         <div className="logo flex  justify-center sm:items-end items-center ">
@@ -13,6 +15,7 @@ function Navbar() {
           <img src={logo} alt="" className="w-[35px] link" />
           <p className="text-2xl uppercase font-semibold">oodSwag</p>
         </div>
+       
         <div className="categories  space-x-3 sm:flex hidden"></div>
       </div>
       <div className="right flex space-x-5">
@@ -24,10 +27,13 @@ function Navbar() {
           />
         </div>
         <div className="flex sm:space-x-5 justify-center items-center ">
-
+   
           <div className="flex justify-center  items-center flex-col sm:mr-[3px] mr-[20px]">
+<a href="/dashboard/products">
+        
             <img src={dashboard} alt="" className="w-[20px] link" />
             <span className="text-[11px]  sm:block hidden">Dashboard</span>
+            </a>
           </div>
 
           <div className="justify-center  items-center flex-col link sm:flex hidden ">
@@ -56,6 +62,7 @@ function Navbar() {
         />
       </div>
     </div>
+ 
   );
 }
 

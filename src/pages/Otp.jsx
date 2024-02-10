@@ -12,9 +12,10 @@ function Otp() {
   //getting user phone from store
   const tempPhone = useSelector((state) => state.authState.userTempPhoneNumber);
   console.log(tempPhone);
+  alert(tempPhone)
   async function verifyOtp() {
-    if (!tempPhone) {
-      toast.error("invalid request");
+    if (tempPhone==null) {
+      toast.error("invalid request")
       return;
     }
     Authentication.userVerifyOtp({ otp: otp.join(""), phone_number: tempPhone })

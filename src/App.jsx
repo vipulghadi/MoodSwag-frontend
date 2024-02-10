@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
@@ -9,7 +10,6 @@ import Cart from "./pages/Cart";
 import Navbar from "./components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Footer } from "./components/Footer";
 import SearchPage from "./pages/SearchPage";
 import Address from "./pages/Address";
 import Profile from "./pages/Profile";
@@ -43,28 +43,32 @@ function App() {
   return (
     <>
       <ToastContainer autoClose={60000} />
-      <Navbar />
+ 
+ 
       <BrowserRouter>
-        <Routes >
+      <Navbar />
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/verify-otp" element={<Otp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="checkout/cart" element={<Cart />} />
-          <Route path="checkout/address" element={<Address />} />
+          <Route path="/checkout/cart" element={<Cart />} />
+          <Route path="/checkout/address" element={<Address />} />
           <Route path="/product" element={<Product />} />
           <Route path="/search/:query" element={<SearchPage />} />
           <Route path="/profile/edit" element={<Profile />} />
-        </Routes>
-        <Routes>
-             <Route path="/dashboard/analytics" element={<Analytics/>}/>
-             <Route path="/dashboard/update-product" element={<UpdateProduct/>}/>
-             <Route path="/dashboard/add-product" element={<AddProduct/>}/>
-             <Route path="/dashboard/products" element={<DisplayMerchantProducts/>}/>
-             <Route path="/dashboard/customizations" element={<Customization/>}/>
+          <Route path="/dashboard/analytics" element={<Analytics />} />
+          <Route path="/dashboard/update-product" element={<UpdateProduct />} />
+          <Route path="/dashboard/add-product" element={<AddProduct />} />
+          <Route
+            path="/dashboard/products"
+            element={<DisplayMerchantProducts />}
+          />
+          <Route path="/dashboard/customizations" element={<Customization />} />
         </Routes>
       </BrowserRouter>
+      
     </>
   );
 }

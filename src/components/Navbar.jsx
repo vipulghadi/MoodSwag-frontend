@@ -10,11 +10,12 @@ function Navbar() {
    
     <div className="w-full bg-white z-20  h-auto shadow-sm flex justify-between items-center sm:px-5 px-2 flex-wrap py-3 sm:h-20 fixed top-0">
       <div className="left flex  justify-center items-center space-x-5 ml-3  ">
-        <div className="logo flex  justify-center sm:items-end items-center ">
+        <Link className="logo flex  justify-center sm:items-end items-center " to={'/'}>
           <img src={burger} alt="" className="w-[20px] sm:hidden mr-5 ml-2" />
           <img src={logo} alt="" className="w-[35px] link" />
           <p className="text-2xl uppercase font-semibold">oodSwag</p>
-        </div>
+         
+        </Link>
        
         <div className="categories  space-x-3 sm:flex hidden"></div>
       </div>
@@ -28,28 +29,27 @@ function Navbar() {
         </div>
         <div className="flex sm:space-x-5 justify-center items-center ">
    
-          <div className="flex justify-center  items-center flex-col sm:mr-[3px] mr-[20px]">
-<a href="/dashboard/products">
+          <Link className="flex justify-center  items-center flex-col sm:mr-[3px] mr-[20px]" to={'/dashboard/products'}>
         
             <img src={dashboard} alt="" className="w-[20px] link" />
             <span className="text-[11px]  sm:block hidden">Dashboard</span>
-            </a>
-          </div>
+          
+          </Link>
 
-          <div className="justify-center  items-center flex-col link sm:flex hidden ">
+          <Link className="justify-center  items-center flex-col link sm:flex hidden " to={'/register'}>
             <img
               src={profile}
               alt=""
               className="w-[20px] link sm:block hidden "
             />
             <span className="text-[11px]  sm:block hidden">profile</span>
-          </div>
+          </Link>
 
 
-          <div className="flex justify-center  items-center flex-col link sm:mr-[3px] mr-[10px]">
+          <Link className="flex justify-center  items-center flex-col link sm:mr-[3px] mr-[10px]" to={'/login'}>
             <img src={cart} alt="" className="w-[20px]  link" />
             <span className="text-[11px] sm:block hidden">cart</span>
-          </div>
+          </Link>
 
           
         </div>

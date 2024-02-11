@@ -1,13 +1,14 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import plus from '../../assets/plus.png'
+
 function AddProduct() {
   return (
-    <div className="w-full  mt-[100px] p-3 flex sm:mt-[80px]">
-      <div className="sidebar  sm:w-3/12  ">
+    <div className="w-full flex  mt-[100px] sm:mt-[80px]  ">
+      <div className="sidebar  sm:w-3/12 w-[70px] ">
         <Sidebar />
       </div>
-      <div className="add-form   bg-white w-full p-2 flex justify-center ">
+      <div className="add-form  bg-white  p-2 flex justify-center sm:w-9/12 ">
         <form action="" className=" sm:w-1/2 space-y-2 font-semibold w-full p-1">
           <p className="text-[17px]">Product Description</p>
           <input

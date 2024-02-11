@@ -23,6 +23,7 @@ import AddProduct from "./pages/Merchant/AddProduct";
 import UpdateProduct from "./pages/Merchant/UpdateProduct";
 import DisplayMerchantProducts from "./pages/Merchant/DisplayMerchantProducts";
 import Customization from "./pages/Merchant/Customization";
+import Orders from "./pages/Merchant/Orders";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <>
-      <ToastContainer autoClose={60000} />
+      <ToastContainer autoClose={600} />
  
  
       <BrowserRouter>
@@ -61,6 +62,7 @@ function App() {
           <Route path="/dashboard/analytics" element={<Analytics />} />
           <Route path="/dashboard/update-product" element={<UpdateProduct />} />
           <Route path="/dashboard/add-product" element={<AddProduct />} />
+          <Route path="/dashboard/orders" element={<Orders />} />
           <Route
             path="/dashboard/products"
             element={<DisplayMerchantProducts />}

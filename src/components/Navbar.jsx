@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
    
-    <div className="w-full bg-white z-20  h-auto shadow-sm flex justify-between items-center sm:px-5 px-2 flex-wrap py-3 sm:h-20 fixed top-0">
+    <div className="w-full bg-white z-20  h-auto shadow-sm flex justify-between items-center sm:px-5 px-2 flex-wrap py-4 sm:h-20 fixed top-0">
       <div className="left flex  justify-center items-center space-x-5 ml-3  ">
         <Link className="logo flex  justify-center sm:items-end items-center " to={'/'}>
           <img src={burger} alt="" className="w-[20px] sm:hidden mr-5 ml-2" />

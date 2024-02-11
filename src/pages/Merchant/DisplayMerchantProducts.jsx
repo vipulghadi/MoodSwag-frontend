@@ -5,8 +5,8 @@ import Filters from "./components/Filters";
 
 function DisplayMerchantProducts() {
   return (
-    <div className="w-full flex  mt-[100px] sm:mt-[80px]  h-screen ">
-      <div className="sidebar w-[100px] sm:w-3/12 ">
+    <div className="w-full flex  mt-[70px] sm:mt-[80px]  h-screen ">
+      <div className="sidebar w-[70px] sm:w-3/12 ">
         <Sidebar />
       </div>
 

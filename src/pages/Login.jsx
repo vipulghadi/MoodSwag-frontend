@@ -31,7 +31,6 @@ function Login() {
     phone_number: "",
   }
 
- 
   const handleSubmit = (values) => {
    
     
@@ -51,16 +50,11 @@ function Login() {
         }
         else{
           //if success
-          
-          
-         
-         
           alert(resp.otp)
           setSuccess(true)
           setIsError(false)
           console.log("sucess");
          
-
           setTimeout(()=>{
             navigate("/verify-otp")
           },1000)
@@ -69,7 +63,7 @@ function Login() {
         }
       })
       .catch((e) => {
-      console.log(e);
+      toast.error("error")
       
       
       });

@@ -6,14 +6,12 @@ import lines from "../../assets/clear.png";
 import chart from "../../assets/chart.png";
 import line from "../../assets/clear.png";
 import { useParams } from "react-router-dom";
+import order from '../../assets/order.png'
 function Sidebar() {
 
-    // const currentUrl = window.location.href
-    // let currentTab=currentUrl.split("/").slice(-1)
-    
+
   return (
     <div className="w-full sm:p-3  ">
-   
       <p className="text-[26px]  sm:block hidden">
         Hi Vipul
       </p>
@@ -23,7 +21,7 @@ function Sidebar() {
           <img
             src={line}
             alt=""
-            className=" w-[40px] sm:w-[30px] mx-auto sm:mx-0"
+            className=" w-[30px] sm:w-[30px] mx-auto sm:mx-0"
           />
           <span className="sm:block hidden text-center">My Products</span>
         </Link>
@@ -33,7 +31,7 @@ function Sidebar() {
           <img
             src={add}
             alt=""
-            className=" w-[40px] sm:w-[30px] mx-auto sm:mx-0"
+            className=" w-[30px] sm:w-[30px] mx-auto sm:mx-0"
           />
           <span className="sm:block hidden text-center">Add New</span>
         </Link>
@@ -43,7 +41,7 @@ function Sidebar() {
           <img
             src={chart}
             alt=""
-            className=" w-[40px] sm:w-[30px] mx-auto sm:mx-0"
+            className=" w-[30px] sm:w-[30px] mx-auto sm:mx-0"
           />
           <span className="sm:block hidden text-center">Analytics</span>
         </Link>
@@ -53,10 +51,20 @@ function Sidebar() {
         <img
           src={brand}
           alt=""
-          className=" w-[40px] sm:w-[30px] mx-auto sm:mx-0"
+          className=" w-[30px] sm:w-[30px] mx-auto sm:mx-0"
         />
         <span className="sm:block hidden text-center">My Brands</span>
       </Link>
+
+      <Link to='/dashboard/orders' className="flex  space-x-3  items-center text-[14px] font-semibold p-1   hover:bg-pink-50 ">
+          
+      <img
+        src={order}
+        alt=""
+        className=" w-[30px] sm:w-[30px] mx-auto sm:mx-0"
+      />
+      <span className="sm:block hidden text-center">My Orders</span>
+    </Link>
 
         {/*<Link className="flex  space-x-3  items-center text-[14px] font-semibold p-1  rounded-2xl"> <img src={add} alt="" className="w-[30px]" /> <span>Add New</span></Link>
       <Link className="flex  space-x-3  items-center text-[14px] font-semibold p-1  rounded-2xl"> <img src={chart} alt="" className="w-[30px]" /> <span>Analytics</span></Link>

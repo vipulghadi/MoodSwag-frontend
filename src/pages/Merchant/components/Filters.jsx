@@ -2,7 +2,7 @@ import React from "react";
 import up from '../../../assets/up.png'
 function Filters() {
   return (
-    <div className="w-full p-2 flex items-center space-x-2">
+    <div className="w-[400px] p-2 flex items-center space-x-2 bg-green-200">
       <span className="font-semibold text-[25px]">Filters</span>
       <div className="brand-filter ml-[20px]">
         <select id="dummy-select" className="text-[12px]">

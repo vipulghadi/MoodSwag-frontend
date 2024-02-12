@@ -1,17 +1,10 @@
 import { configureStore, } from '@reduxjs/toolkit';
 import authReducer from '../store/AuthSlice'
-
+import filterReducer from '../store/FilterSlice'
 
 export const store = configureStore({
     reducer: {
-        authState: authReducer
+        authState: authReducer,
+        filterState: filterReducer
     }
 });
-
-
-export const UpdateLocalStorage = () => {
-    console.log("in updated");
-    const state = store.getState()
-    console.log(state);
-    localStorage.getItem("authCredits") == null ? localStorage.setItem("authStorage", JSON.stringify(null)) : localStorage.setItem("authCredits", JSON.stringify(state))
-}

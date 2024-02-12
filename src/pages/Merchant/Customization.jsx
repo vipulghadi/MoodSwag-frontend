@@ -11,11 +11,11 @@ function Customization() {
 
       <div className="data w-[500px]  sm:w-9/12 bg-green overflow-y-scroll scroll sm: p-5 space-y-3 bg-white">
         <p className="text-[20px] font-semibold mb-[20px]">Create New Brand</p>
-        <form action="" className="bg-green-200">
+        <form action="" className="">
           <input
             type="text"
-            placeholder="saf"
-            className="outline-none border border-pink-400 rounded-md p-1 w-full"
+            placeholder="eg. Nike"
+            className="outline-none border border-pink-400 rounded-md py-1 px-2 font-semibold w-full"
           />
           <button className="w-full p-1 bg-pink-400 text-white rounded-md mt-5">
             Create

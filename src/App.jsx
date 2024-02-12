@@ -24,6 +24,7 @@ import UpdateProduct from "./pages/Merchant/UpdateProduct";
 import DisplayMerchantProducts from "./pages/Merchant/DisplayMerchantProducts";
 import Customization from "./pages/Merchant/Customization";
 import Orders from "./pages/Merchant/Orders";
+import OrderDetailsPage from "./pages/Merchant/OrderDetailsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -59,7 +60,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/search/:query" element={<SearchPage />} />
           <Route path="/profile/edit" element={<Profile />} />
-          <Route path="/dashboard/analytics" element={<Analytics />} />
+          <Route path="/dashboard/analytics" element={<OrderDetailsPage />} />
           <Route path="/dashboard/update-product" element={<UpdateProduct />} />
           <Route path="/dashboard/add-product" element={<AddProduct />} />
           <Route path="/dashboard/orders" element={<Orders />} />

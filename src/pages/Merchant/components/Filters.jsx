@@ -2,7 +2,7 @@ import React from "react";
 import up from '../../../assets/up.png'
 function Filters() {
   return (
-    <div className="w-[400px] p-2 flex items-center space-x-2 bg-green-200">
+    <div className="w-[400px] p-2 flex items-center space-x-2">
       <span className="font-semibold text-[25px]">Filters</span>
       <div className="brand-filter ml-[20px]">
         <select id="dummy-select" className="text-[12px]">
@@ -30,7 +30,7 @@ function Filters() {
       <img src={up} alt="" className="w-[10px] h-[10px] transform scale-y-[-1]" />
       </div>
       <div className="update-on-filter flex items-center space-x-1 link">
-      <span className="text-[12px]">updated </span>
+      <span className="text-[12px]">updated  on</span>
       <img src={up} alt="" className="w-[10px] h-[10px] transform scale-y-[-1]" />
       </div>
      
